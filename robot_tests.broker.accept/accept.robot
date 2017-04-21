@@ -766,21 +766,12 @@ Login
 
 Отримати інформацію про items[0].deliveryDate.endDate
 #Відображення дати доставки номенклатури переговорної процедури
-#    wait until element is visible  click element  xpath=(.//div[@ng-click='toggle()'])[2] 60
-#    click element  xpath=(.//div[@ng-click='toggle()'])[2]
-#    sleep  2
-#    wait until element is visible            xpath=(.//span[@dataanchor='deliveryDate.endDate'])[1]  60
-#    ${return_value}=  get element attribute  xpath=(.//span[@dataanchor='deliveryDate.endDate'])[1]@textContent
-    ${return_value}=  get element attribute  xpath=(.//div/div/span[@dataanchor='deliveryDate.endDate'])[1]@textContent
+    ${return_value}=  get value  xpath=(.//span[@dataanchor='deliveryDate.endDate'])[1]
     [return]  ${return_value}
 
 Отримати інформацію про items[1].deliveryDate.endDate
 #Відображення дати доставки номенклатури переговорної процедури
-#    wait until element is visible  click element  xpath=(.//div[@ng-click='toggle()'])[2] 60
-#    click element  xpath=(.//div[@ng-click='toggle()'])[2]
-#    sleep  2
-#    ${return_value}=  get element attribute  xpath=(.//span[@dataanchor='deliveryDate.endDate'])[2]@textContent
-    ${return_value}=  get element attribute  xpath=(.//div/div/span[@dataanchor='deliveryDate.endDate'])[2]@textContent
+    ${return_value}=  get value  xpath=(.//span[@dataanchor='deliveryDate.endDate'])[2]
     [return]  ${return_value}
 
 Отримати інформацію про items[0].deliveryAddress.countryName
