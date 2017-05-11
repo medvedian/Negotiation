@@ -315,7 +315,6 @@ Login
   select from list      supplier-address-country-0          ${suppliers_countryName}
   select from list      supplier-address-region-0           ${suppliers_region}
   sleep  1
-  click element  award-qualified
   click element  xpath=/html/body/div[1]/div/div/form/ng-transclude/div[3]/button[1]
   wait until element is visible  xpath=//div[contains(text(),'публіковано')]  300
   click element  id=award-negot-active-0
@@ -327,6 +326,8 @@ Login
   sleep  1
   input text  description-award-document  Назва документу
   choose file  id=file-award-document  ${ARGUMENTS[3]}
+  sleep  2
+  click element  award-qualified
   sleep  2
   click element  xpath=/html/body/div[1]/div/div/form/ng-transclude/div[3]/button[1]
   wait until element is visible  xpath=//div[contains(text(),'публіковано')]  300
